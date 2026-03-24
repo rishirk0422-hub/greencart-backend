@@ -10,6 +10,18 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000", // local
+      "https://greencart-frontend-delta.vercel.app" // 🔥 replace with your real Vercel URL
+    ],
+    credentials: true
+  })
+);
+
 console.log("🚀 STARTING SERVER...");
 
 // ✅ connect MongoDB
