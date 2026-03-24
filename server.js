@@ -8,10 +8,6 @@ const app = express();
 
 // ✅ middlewares
 app.use(cors());
-app.use(express.json());
-
-const cors = require("cors");
-
 app.use(
   cors({
     origin: [
@@ -21,6 +17,10 @@ app.use(
     credentials: true
   })
 );
+app.use(express.json());
+
+const cors = require("cors");
+
 
 console.log("🚀 STARTING SERVER...");
 
