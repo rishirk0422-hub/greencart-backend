@@ -19,7 +19,6 @@ app.use(
 );
 app.use(express.json());
 
-const cors = require("cors");
 
 
 console.log("🚀 STARTING SERVER...");
